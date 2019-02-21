@@ -7,6 +7,7 @@ import "./layout.css"
 import { ThemeProvider } from 'styled-components'
 import { Gray as theme } from '../themes/Gray'
 import { Footer, Main} from '../components/Elements'
+
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
   <StaticQuery

@@ -7,7 +7,7 @@ const StyledButton = styled(ButtonBase)`
  ${props => props.theme.variants.linkButton[props.variant || 'priamry']};
 `
 
-export const LinkButton = props => <StyledButton { ...porps}/>
+export const LinkButton = props => <StyledButton { ...props}/>
 
 LinkButton.propTypes = {
     variant: PropTypes.string

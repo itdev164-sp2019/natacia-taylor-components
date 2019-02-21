@@ -10,7 +10,7 @@ export const BaseContainer = ({ children, flex, ...props }) => {
             </Flex>
         )
     } else {
-        reurn (
+        return (
             <Box {...props} className={props.className}>
             {children}
             </Box>
