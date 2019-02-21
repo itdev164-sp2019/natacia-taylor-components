@@ -4,8 +4,12 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import { ThemeProvider } from 'styled-components'
+import { Gray as theme } from '../themes/Gray'
+import { Footer, Main} from '../components/Elements'
 
 const Layout = ({ children }) => (
+  <ThemeProvider theme={theme}>
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -27,16 +31,17 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
-          <main>{children}</main>
-          <footer>
+          <Main>{children}</Main>
+          <Footer>
             © {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          </Footer>
         </div>
       </>
     )}
   />
+  </ThemeProvider>
 )
 
 Layout.propTypes = {
