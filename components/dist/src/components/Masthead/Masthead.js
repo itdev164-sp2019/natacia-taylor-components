@@ -5,7 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Masthead = undefined;
 
-var _templateObject = _taggedTemplateLiteral(['\nheight: ', ';\nwidth: 100%;\nbackground-color: rebeccapurple;\nmargin-bottom: 1.45rem;\n'], ['\nheight: ', ';\nwidth: 100%;\nbackground-color: rebeccapurple;\nmargin-bottom: 1.45rem;\n']);
+var _templateObject = _taggedTemplateLiteral(['\nheight: ', ';\nwidth: 100%;\nbackground-color: rebeccapurple;\nmargin-bottom: 1.45rem;\n'], ['\nheight: ', ';\nwidth: 100%;\nbackground-color: rebeccapurple;\nmargin-bottom: 1.45rem;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\ncolor: white;\ntext-decoration: none;\n'], ['\ncolor: white;\ntext-decoration: none;\n']);
 
 var _react = require('react');
 
@@ -28,6 +29,7 @@ function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defi
 var Outer = (0, _styledComponents2.default)(_rebass.Box)(_templateObject, function (props) {
     return props.height;
 });
+var StyledLink = (0, _styledComponents2.default)(_rebass.Link)(_templateObject2);
 
 var Masthead = exports.Masthead = function Masthead(_ref) {
     var height = _ref.height,
@@ -37,13 +39,9 @@ var Masthead = exports.Masthead = function Masthead(_ref) {
         Outer,
         { height: height },
         _react2.default.createElement(
-            _rebass.Link,
+            StyledLink,
             {
-                href: '/',
-                style: {
-                    color: 'white',
-                    textDecoration: 'none'
-                } },
+                href: '/' },
             siteTitle
         )
     );
