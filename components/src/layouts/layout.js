@@ -1,12 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
 import "./layout.css"
 import { ThemeProvider } from 'styled-components'
 import { Gray as theme } from '../themes/Gray'
 import { Footer, Main} from '../components/Elements'
+import { Masthead } from '../components/Masthead'
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
@@ -21,8 +20,8 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+      <div>
+        <Masthead siteTitle={data.site.siteMetadata.title} height="75px" />
         <div
           style={{
             margin: `0 auto`,
@@ -38,7 +37,7 @@ const Layout = ({ children }) => (
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </Footer>
         </div>
-      </>
+      </div>
     )}
   />
   </ThemeProvider>
