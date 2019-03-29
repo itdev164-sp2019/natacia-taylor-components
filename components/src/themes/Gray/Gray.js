@@ -54,6 +54,11 @@ const theme = {
             tablet: breakpoints[1],
             phone: breakpoints[0]
         }
+    },
+    transitions: {
+       short: 'all 0.3s ease-out',
+       medium: 'all 0.6s ease-out',
+       long: 'all 0.9s ease-out' 
     }
 }
 
@@ -117,6 +122,14 @@ const variants = {
         contrast: {
             ...defaults.link,
             color: theme.colors.primary.contrastText
+        }
+    },
+    mastheadDrawer: {
+        primary: {
+            background: theme.colors.primary.main
+        },
+        contrast: {
+            backgorund: theme.colors.primary.contrastText
         }
     }
 }

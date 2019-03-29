@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import {
-    MediaQuery,
-    BaseContainer, 
+    Nav,
+    MediaQuery, 
     Link,
     Image, 
     Header, 
@@ -21,7 +21,7 @@ Item.defaultProps = {
     my: 'auto',
     mr: 3
 }
-const Nav = props => <BaseContainer as="nav" {...props}/>
+
 
 export const DefaultLayout = ({ image }) => (
     <StyledHeader flex alignItems="center" p={3}>
