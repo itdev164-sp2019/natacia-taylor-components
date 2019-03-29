@@ -58,6 +58,9 @@ const defaults = {
         borderBottom: theme.borders[1],
         borderColor: darken(0.1, theme.colors.primary.main)
     },
+    link: {
+        textDecoration: 'none'
+    },
     button:{
       padding: `${theme.space[2] / 16}em ${(theme.space[3] + 4) / 16}em`,
       border: theme.borders[3],
@@ -95,6 +98,16 @@ const variants = {
             color: theme.colors.primary.main
         },
         contrast: {
+            color: theme.colors.primary.contrastText
+        }
+    },
+    link: {
+        primary: {
+            ...defaults.link,
+            color: theme.colors.primary.main
+        },
+        contrast: {
+            ...defaults.link,
             color: theme.colors.primary.contrastText
         }
     }
