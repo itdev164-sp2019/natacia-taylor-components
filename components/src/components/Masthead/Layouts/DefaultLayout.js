@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { 
+import {
+    MediaQuery,
     BaseContainer, 
     Link,
     Image, 
@@ -28,6 +29,7 @@ export const DefaultLayout = ({ image }) => (
     <Item>
         <MenuButton variant="constrast" />
     </Item>
+    <MediaQuery device="desktop">
     <Nav flex>
     <Item>
         <Link variant="contrast" href="about.html">
@@ -40,6 +42,7 @@ export const DefaultLayout = ({ image }) => (
         </Link>
     </Item>
     </Nav>
+    </MediaQuery>
     </Section>
     <Section flex width={[4 / 12, 1 / 3, 1 / 3]} justifyContent="center">
         <Image 
@@ -51,7 +54,9 @@ export const DefaultLayout = ({ image }) => (
     </Section>
     <Section flex width={[8 / 12, 1 / 3, 1 / 3]} justifyContent="flex-end">
     <Item>
+        <MediaQuery device="tablet">
         <SearchButton variant="contrast" />
+        </MediaQuery>
     </Item>
     <Item>
         <Button fontSize={[0, 2, 3]} variant="contrast">
