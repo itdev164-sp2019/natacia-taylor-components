@@ -12,7 +12,7 @@ z-index: 9999;
 `
 export const Masthead = ({ height, children }) => {
     return (
-        <Outer height={height}>{children}>
+        <Outer height={height}>{children}
     </Outer>
     )
 }

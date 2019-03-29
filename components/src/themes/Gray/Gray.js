@@ -10,7 +10,9 @@ const icons = {
     Menu: <Menu/>,
     Search: <Search/>
 }
+const breakpoints = [576, 768, 900]
 const theme = {
+    breakpoints: [...breakpoints],
     space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
     lineHeights: {
         solid: 1, 
@@ -46,6 +48,18 @@ const theme = {
             disabled: 'hsl(208, 13%, 75%)',
             hint: 'hsl(208, 13%, 75%)'
         }
+    },
+    media: {
+        sizes: {
+            desktop: breakpoints[2],
+            tablet: breakpoints[1],
+            phone: breakpoints[0]
+        }
+    },
+    transitions: {
+       short: 'all 0.3s ease-out',
+       medium: 'all 0.6s ease-out',
+       long: 'all 0.9s ease-out' 
     }
 }
 
@@ -57,6 +71,9 @@ const defaults = {
         background: theme.colors.primary.main,
         borderBottom: theme.borders[1],
         borderColor: darken(0.1, theme.colors.primary.main)
+    },
+    link: {
+        textDecoration: 'none'
     },
     button:{
       padding: `${theme.space[2] / 16}em ${(theme.space[3] + 4) / 16}em`,
@@ -96,6 +113,24 @@ const variants = {
         },
         contrast: {
             color: theme.colors.primary.contrastText
+        }
+    },
+    link: {
+        primary: {
+            ...defaults.link,
+            color: theme.colors.primary.main
+        },
+        contrast: {
+            ...defaults.link,
+            color: theme.colors.primary.contrastText
+        }
+    },
+    mastheadDrawer: {
+        primary: {
+            background: theme.colors.primary.main
+        },
+        contrast: {
+            backgorund: theme.colors.primary.contrastText
         }
     }
 }
