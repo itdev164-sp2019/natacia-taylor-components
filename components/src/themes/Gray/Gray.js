@@ -10,6 +10,7 @@ const icons = {
     Menu: <Menu/>,
     Search: <Search/>
 }
+const breakpoints = [576, 768, 900]
 const theme = {
     breakpoints: [...breakpoints],
     space: [0, 4, 8, 16, 32, 64, 128, 256, 512],

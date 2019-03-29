@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import {
-    Nav,
-    MediaQuery, 
+    Nav, 
     Link,
     Image, 
     Header, 
     Button, 
     Section } from '../../Elements'
+import { MediaQuery } from '../../MediaQuery'
 import { MenuButton, SearchButton } from '../../Buttons'
 
 const StyledHeader = styled(Header)`

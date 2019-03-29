@@ -18,12 +18,12 @@ ${props => props.theme.variants.mastheadDrawer[props.variant || 'primary']};
 const Spacer = styled.div`
 position: static;
 width: 974px;
-height: ${props = props.height};
+height: ${props => props.height};
 display: flex;
 vertical-align: baseline;
 float: none;
 `
-export const Drawer = ({ variant, children, width, ...props}) => (
+export const MastheadDrawer = ({ variant, children, width, ...props}) => (
     <div>
         <Outer { ...props}>
         <Nav flex alignItems="center" justifyContent="space-evenly" width={width} {...props}>
@@ -34,10 +34,11 @@ export const Drawer = ({ variant, children, width, ...props}) => (
     </div>
 )
 
-Drawer.propTypes = {
+MastheadDrawer.propTypes = {
     variant: PropTypes.string,
     height: PropTypes.string.isRequired,
     width: PropTypes.string.isRequired,
     top: PropTypes.string.isRequired,
     children: PropTypes.node.isRequired
 }
+
