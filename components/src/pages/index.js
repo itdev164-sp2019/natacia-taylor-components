@@ -35,8 +35,10 @@ const IndexPage = () => (
 
       <ShareButtonList
    addThisPubId="ra-5cc2037802504f64"
-   //contentTitle="Fake Title"
-   //contentImage=""
+   contentTitle="Fake Title"
+   contentImage="htttp://placekitten.com/g/300/700"
+   contentDescription="Here is an article about science things,
+                        and maybe kittens."
    />  
   </Layout>
 )
