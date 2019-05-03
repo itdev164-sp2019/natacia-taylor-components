@@ -6,7 +6,7 @@ import Image from "../gatsby-components/image"
 import SEO from "../gatsby-components/seo"
 import {Button, IconButton, Section } from '../components/Elements'
 import { Search } from 'styled-icons/feather'
-
+import { ShareButtonList } from '../components/SocialShareButton'
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -32,6 +32,14 @@ const IndexPage = () => (
        more recently with desktop publishing 
        software like Aldus PageMaker including versions
         of Lorem Ipsum.
+
+      <ShareButtonList
+   addThisPubId="ra-5cc2037802504f64"
+   contentTitle="Fake Title"
+   contentImage="htttp://placekitten.com/g/300/700"
+   contentDescription="Here is an article about science things,
+                        and maybe kittens."
+   />  
   </Layout>
 )
 
