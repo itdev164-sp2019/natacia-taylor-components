@@ -2,9 +2,16 @@ import React from 'react'
 import mastheadImage from './images/styled-components.png'
 import { Menu, Search } from 'styled-icons/feather'
 import { darken } from 'polished'
+import shareFacebookImage from './images/share_facebook.png'
+import shareMoreImage from './images/share_more.png'
+import shareTwitterImage from './images/share_twitter.png'
+
 
 const images = {
-    mastheadImage
+    mastheadImage,
+    shareFacebookImage,
+    shareTwitterImage,
+    shareMoreImage
 }
 const icons = {
     Menu: <Menu/>,
@@ -83,6 +90,12 @@ const defaults = {
     },
     text: {
         lineHeight: theme.lineHeights.copy
+    },
+    socialShareButton: {
+        img: {
+            width: '100px',
+            height: 'auto'
+        }
     }
 }
 
